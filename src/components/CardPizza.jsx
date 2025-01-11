@@ -4,7 +4,7 @@
 // const CardPizza = ({name, price, ingredients, img}) => {
 const CardPizza = ({producto}) => {
     /* DESTRUCTURING PRODUCTO (PROPS) */
-    const {name, price, ingredients, img, desc} = producto
+    const {name, price, ingredients, img, desc, id} = producto
     return (
         /* ****** CARD ****** */
         <article className = "card">
@@ -18,16 +18,18 @@ const CardPizza = ({producto}) => {
                     <p className="pizza-description">{desc}</p>
                 </div>
                 {/* INGREDIENTES */}
-                <p className="ingredientes">
-                    Ingredientes:
-                    <br />
-                    {/* UTF-8 EMOJI PIZZA: &#x1F355; */}
-                    {/* EL MÉTODO .JOIN() CONVIERTE UN ARREGLO A UN STRING */}
-                    {/* <span className="span-ingredientes">&#127829; {ingredients.join(", ")}</span> */}
+                <div className="ingredientes">
+                    <p>
+                        Ingredientes:
+                        {/* <br /> */}
+                        {/* UTF-8 EMOJI PIZZA: &#x1F355; */}
+                        {/* EL MÉTODO .JOIN() CONVIERTE UN ARREGLO A UN STRING */}
+                        {/* <span className="span-ingredientes">&#127829; {ingredients.join(", ")}</span> */}
+                    </p>
                     <ul className="ingredients-list">
                         {ingredients.map((ing) => <li key={ing} className="ingredients-li">&#127829; {ing}</li>)}
                     </ul>
-                </p>
+                </div>                
                 {/* PRECIO & BOTONES DE VER MÁS Y AÑADIR AL CARRO DE COMPRAS */}
                 <div className="precio-botones">
                     <h2>Precio: ${price.toLocaleString('es-CL')}</h2>

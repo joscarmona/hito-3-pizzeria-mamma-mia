@@ -35,7 +35,7 @@ const Home = () => {
             <section className="card-container" >
                 {/* SE RENDERIZA EL COMPONENTE CARDPIZZA */}
                 {
-                    pizzas.map((pizza) => <CardPizza key={pizza.name} producto = {pizza}/>)
+                    pizzas.map((pizza) => <CardPizza key={pizza.id} producto = {pizza}/>)
                 }
             </section>
         </main>
