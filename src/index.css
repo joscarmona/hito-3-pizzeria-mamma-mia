@@ -22,7 +22,7 @@ body{
   'navbar'
   'home'
   'footer';
-  grid-template-rows: 0.6fr 8fr 1fr;
+  grid-template-rows: 0.4fr 8fr 0.6fr;
   /* gap: 20px; */
 }
 
@@ -127,6 +127,7 @@ body{
   display: flex;
   flex-direction: column;
   border-radius: 5px;
+  width: min-content;
   /* gap: 20px; */
 }
 
@@ -144,10 +145,26 @@ body{
   /* border: 1px solid #e1e4e9; */
 }
 
+/* ****** PIZZA NAME-DESCRIPTION ****** */
+.pizza-name-description{
+  /* border: 0.5px solid #c0c4ce; */
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
 /* ****** PIZZA NAME ****** */
 .pizza-name{
   /* border: 0.5px solid #c0c4ce; */
-  padding: 1em;
+  padding: 0.5em 0em;
+}
+
+/* PIZZA DESCRIPTION */
+.pizza-description{
+  /* border: 0.5px solid #c0c4ce; */
+  /* border: 1px solid red; */
+  /* padding: 1em; */
+  color: #5c5f69;
 }
 
 /* ****** INGREDIENTES ****** */
@@ -157,6 +174,18 @@ body{
   line-height: 2.5em;
   text-align: center;
   color: #5c5f69;
+}
+
+.ingredients-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ingredients-li{
+  font-size: small;
+  width: fit-content;
+  list-style-type: none;
 }
 
 .span-ingredientes{

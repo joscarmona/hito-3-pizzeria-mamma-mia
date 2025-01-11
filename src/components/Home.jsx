@@ -1,5 +1,6 @@
 import CardPizza from "./CardPizza"
 import Header from "./Header"
+import { pizzas } from "../pizzas"
 
 /* ARREGLO DEL MENÚ DE LAS PIZZAS */
 const menu = [
@@ -34,7 +35,7 @@ const Home = () => {
             <section className="card-container" >
                 {/* SE RENDERIZA EL COMPONENTE CARDPIZZA */}
                 {
-                    menu.map((pizza) => <CardPizza producto = {pizza}/>)
+                    pizzas.map((pizza) => <CardPizza key={pizza.name} producto = {pizza}/>)
                 }
             </section>
         </main>

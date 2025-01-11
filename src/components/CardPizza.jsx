@@ -4,7 +4,7 @@
 // const CardPizza = ({name, price, ingredients, img}) => {
 const CardPizza = ({producto}) => {
     /* DESTRUCTURING PRODUCTO (PROPS) */
-    const {name, price, ingredients, img} = producto
+    const {name, price, ingredients, img, desc} = producto
     return (
         /* ****** CARD ****** */
         <article className = "card">
@@ -12,15 +12,21 @@ const CardPizza = ({producto}) => {
             <img src = {img} alt = {"Pizza " + name} className="card-image" />
             {/* CARD BODY */}
             <div className="card-body">
-                {/* NOMBRE */}
-                <h3 className="pizza-name">{"Pizza " + name}</h3>
+                {/* NOMBRE-DESCRIPCIÓN*/}
+                <div className="pizza-name-description">
+                    <h3 className="pizza-name">{"Pizza " + name}</h3>
+                    <p className="pizza-description">{desc}</p>
+                </div>
                 {/* INGREDIENTES */}
                 <p className="ingredientes">
                     Ingredientes:
                     <br />
                     {/* UTF-8 EMOJI PIZZA: &#x1F355; */}
                     {/* EL MÉTODO .JOIN() CONVIERTE UN ARREGLO A UN STRING */}
-                    <span className="span-ingredientes">&#127829; {ingredients.join(", ")}</span>
+                    {/* <span className="span-ingredientes">&#127829; {ingredients.join(", ")}</span> */}
+                    <ul className="ingredients-list">
+                        {ingredients.map((ing) => <li key={ing} className="ingredients-li">&#127829; {ing}</li>)}
+                    </ul>
                 </p>
                 {/* PRECIO & BOTONES DE VER MÁS Y AÑADIR AL CARRO DE COMPRAS */}
                 <div className="precio-botones">
