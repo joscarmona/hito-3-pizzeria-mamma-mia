@@ -302,6 +302,82 @@ body{
 /* ******************************************************************* */
 /* ******************************************************************* */
 
+/* ****** CART (CARRITO DE COMPRAS) ****** */
+/* SE UTILIZA LA CLASE MAIN-SECTION DEFINIDA EN REGISTER & LOGIN PAGE */
+
+/* CART-CONTAINER */
+.cart-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 1em;
+  /* border: solid red; */
+  width: 60%;
+  height: fit-content;
+  background-color: #383737;
+  border-radius: 10px;
+}
+
+/* SE UTILIZA LA CLASE BUTTON-AÑADIR-CARRO DEFINIDA EN PRECIO & BTNS DE VER MÁS Y DE AÑADIR AL CARRO DE COMPRAS */
+
+/* <UL> */
+/* PRODUCTOS-TO-BUY */
+.products-to-buy{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* <LI> */
+/* CART-PIZZA */
+.cart-pizza{
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+
+/* IMAGEN DE LA PIZZA Y NOMBRE */
+.pizza-img-name-container{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 50%;
+}
+
+/* CART-PIZZA-IMAGE */
+.cart-pizza-image{
+  width: 20%;
+}
+
+/* PRECIO - BOTONES DE INC & DEC - CANTIDAD DE PIZZAS EN EL CARRITO */
+.pizza-price-count-container{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ****** DEC-BUTTON ****** */
+.dec-button{
+  width: 25px;
+  height: 25px;
+  font-size: large;
+  cursor: pointer;
+  border-radius: 5px;
+  /* border: none; */
+  border-color: #383737;
+}
+
+/* ****** INC-BUTTON ****** */
+.inc-button{
+  width: 25px;
+  height: 25px;
+  font-size: large;
+  cursor: pointer;
+  border-radius: 5px;
+  border-color: #383737;
+}
 
 /* ****** FOOTER ****** */
 .footer{
